@@ -26,10 +26,10 @@ class Audio{
 	}
 
 	public function sendVoiceMessage(){
-		$res = $this->API->post('/audio', array('numero_destino' => $this->numero_destino, 
+		return $this->API->post('/audio', array('numero_destino' => $this->numero_destino, 
 		   					  			  'url_audio' => $this->url_audio,
 								   		  'resposta_usuario' => $this->resposta_usuario));
-		$this->setResponse($res->data());
+		
 	}
 
 	public function getVoiceMessage($id){
