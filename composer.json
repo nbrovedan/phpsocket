@@ -9,5 +9,8 @@
             "email": "brovedan@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+	"autoload": {
+		"classmap": ["config","libs","class"]
+	}
 }
