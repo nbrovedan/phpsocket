@@ -1,14 +1,15 @@
 <?php
 	
 final class Response extends Messages{
-
+	//statusCode é o código HTTP retornado pelo servidor
+	//message a mensagem
 	private $statusCode;
 	private $message;
-
+	
 	public function getStatusCode(){
 		return $this->statusCode;
 	}
-
+	
 	public function getMessage(){
 		return $this->message;
 	}
@@ -20,7 +21,7 @@ final class Response extends Messages{
 	public function setMessage($message){
 		$this->message = $message;
 	}
-	//override
+	//override para processar o resultado e capturar o http status e a mensagem
 	public function setResult($result){
 		$this->result = $result;
 		$this->processResult();
@@ -33,7 +34,7 @@ final class Response extends Messages{
 	public function toString(){
 		return explode("\r\n\r\n", $this->getResult());
 	}
-	//Retorna apenas o body
+	//Retorna o resultado da requisição
 	public function data(){
 		if(count(explode("\r\n\r\n", $this->getResult())) > 1){
 			$data = explode("\r\n\r\n", $this->getResult());	

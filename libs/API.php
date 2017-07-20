@@ -42,6 +42,12 @@ class API{
 		return $res;
  	}
 	//Método GET
+	/**
+	*	parâmetros: 
+	*	- route: o endereço do endpoint Ex: '/audio'
+	* 	resposta:
+	* 	- Objeto response;
+	*/
 	public function get($route){
 		//Cria um objeto request e adiciona a rota no header
 		$req = new Request(_GET_, $route);
@@ -58,6 +64,13 @@ class API{
 		return $res;
 	}
 	//Método PUT
+	/**
+	*	parâmetros: 
+	*	- route: o endereço do endpoint Ex: '/audio/1'
+	*   - data: um array de chave e valor contendo os dados a serem atualizados Ex: array('nome' => 'Walter White')
+	* 	resposta:
+	* 	- Objeto response;
+	*/
 	public function put($route, $data){
 		//Cria um novo objeto request
 		$req = new Request(_PUT_,$route);
@@ -78,6 +91,13 @@ class API{
 		return $res;
 	}
 	//Método POST
+	/**
+	*	parâmetros: 
+	*	- route: o endereço do endpoint Ex: '/audio'
+	*   - data: um array de chave e valor contendo os dados a serem atualizados Ex: array('nome' => 'Walter White')
+	* 	resposta:
+	* 	- Objeto response;
+	*/
 	public function post($route, $data){
 		//Cria um novo objeto request
 		$req = new Request(_POST_,$route);
@@ -97,6 +117,12 @@ class API{
 		return $res;
 	}
 	//Método DELETE
+	/**
+	*	parâmetros: 
+	*	- route: o endereço do endpoint Ex: '/audio/1'
+	* 	resposta:
+	* 	- Objeto response;
+	*/
 	public function delete($route){
 		//Cria o objeto
 		$req = new Request(_DELETE_,$route);
