@@ -1,0 +1,13 @@
+{
+    "name": "brovedan/totalvoice",
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "authors": [
+        {
+            "name": "Naidion Brovedan",
+            "email": "brovedan@gmail.com"
+        }
+    ],
+    "require": {}
+}

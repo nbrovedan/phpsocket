@@ -22,7 +22,7 @@ class API{
  		//Seta o header Host
  		$req->setHeader("Host: " . Config::$server['url'] . ':' . Config::$server['port']);
  		//Conecta o socket
- 		if(!socket_connect($this->socket, 'ssl://'.Config::$server['url'], Config::$server['port'])){
+ 		if(!socket_connect($this->socket, Config::$server['url'], Config::$server['port'])){
  			throw new Exception("Falha ao conectar o socket ao servidor " . Config::$server['url'] . ":" . Config::$server["port"] . "!<BR />Erro: " . socket_strerror(socket_last_error($this->socket)) , 1);
  		}
  		
