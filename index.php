@@ -8,5 +8,5 @@
 	//Envia a mensagem
 	print_r($audio->sendVoiceMessage($message));
 	//Busca a mensagem 1
-	print_r($audio->getVoiceMessage(1));
+	//print_r($audio->getVoiceMessage(1));
 ?>

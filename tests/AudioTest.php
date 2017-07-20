@@ -8,9 +8,9 @@ class AudioTest extends PHPUnit_Framework_TestCase{
      * @dataProvider dataValues
      */
 	public function testSendVoiceMessage($numero_destino, $url_audio, $resposta_usuario, $expected){
-		$audio = new Audio($numero_destino, $url_audio, $resposta_usuario);
-		$res = $audio->sendVoiceMessage();
-		$this->assertEquals($expected, $res->getStatusCode());
+		$audio = new Audio();
+		$message = $audio->createMessage($numero_destino, $url_audio, $resposta_usuario);
+		$this->assertEquals($expected, $audio->sendVoiceMessage($message));
 	}
 
 	public function dataValues()
